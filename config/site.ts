@@ -57,9 +57,16 @@ export type SiteConfig = {
 		title: string
 		experiences: ExperienceItem[]
 	}
-	services?: {
+	activities?: {
 		title: string
-		items: { title: string; description: string }[]
+		items: {
+			title: string
+			description: string
+			date: string
+			image?: string // fallback single image
+			images?: string[] // optional multiple images for slideshow (takes precedence if provided)
+			link?: string
+		}[]
 	}
 	connect: {
 		title: string
@@ -133,7 +140,7 @@ export const siteConfig: SiteConfig = {
 				type: "multi-line", // use "single-line" for a single line
 				content: [
 					"Web Developer.",
-					"✦ I focus on building your MVP fast.",
+					"✦ I focus on building your MVP.",
 					"✦ You focus on growing it fast.",
 				],
 				// content: "YOUR HEADING HERE", // use this for single line
@@ -146,8 +153,8 @@ export const siteConfig: SiteConfig = {
 					href: urls.bookCall,
 				},
 				secondary: {
-					label: "View my services",
-					href: "#services",
+					label: "Recent activity",
+					href: "#activities",
 				},
 			},
 		},
@@ -191,6 +198,33 @@ export const siteConfig: SiteConfig = {
 				github: "https://github.com/alifarooq9/promptthing",
 				livePreview: "https://prompthing.vercel.app/",
 			},
+			{
+				title: "Fern AI",
+				description:
+					"Fern AI is a cutting-edge application that utilizes artificial intelligence to provide personalized learning experiences for users.",
+				video:
+					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1755065542/fern-ai_gopt18.mov",
+				github: "https://github.com/rayaadinda/Fern",
+				livePreview: "https://fernai.vercel.app/",
+			},
+			{
+				title: "Inventory Management System Dashboard",
+				description:
+					"An application to manage inventory effectively for CV Kurnia Jaya Industry providing features for tracking stock levels, orders, and sales.",
+				video:
+					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1755066194/2025-08-13_13-20-39_rgcafl.mkv",
+				github: "https://github.com/rayaadinda/frontend-kp",
+				livePreview: "https://frontend-kp-gamma.vercel.app/",
+			},
+			{
+				title: "Temani",
+				description:
+					"AI‑assisted volunteer management for Indonesian Heritage Society (rosters, smart matching, impact analytics).",
+				video:
+					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1755067287/Untitled_design_tmgl6g.mp4",
+				github: "https://github.com/rayaadinda/Hackathon-Backend",
+				livePreview: "https://temani-sigma.vercel.app/",
+			},
 		],
 	},
 	experience: {
@@ -213,23 +247,34 @@ export const siteConfig: SiteConfig = {
 			},
 		],
 	},
-	services: {
-		title: "Services",
+	activities: {
+		title: "Recent Activity",
 		items: [
 			{
-				title: "MVP Development",
+				title: "Garuda Hacks 6.0",
 				description:
-					"I build and launch your first product version rapidly using modern, scalable tooling.",
+					"Built Temani in a 30‑hour hackathon: AI‑assisted volunteer management for Indonesian Heritage Society (rosters, smart matching, impact analytics).",
+				date: "2025-07-24",
+				images: [
+					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1755062639/hackthon_h3ihae.jpg",
+					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1755064576/IMG_4834_lif2rf.jpg",
+					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1755064575/97b4b47b-e075-4077-ab2b-b95bb46ab47d_tkubxv.jpg",
+					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1755064576/IMG_4904_xapjjv.jpg",
+				],
+				link: "https://devpost.com/software/temani",
 			},
 			{
-				title: "Product Optimization",
+				title: "Bangkit Academy",
 				description:
-					"Audits & improves performance, DX, and SEO to prepare your app for growth.",
-			},
-			{
-				title: "Architecture Consulting",
-				description:
-					"Guidance on codebase structure, scalability patterns, and tech stack decisions.",
+					'Create "Unchain", an innovative mobile application that leverages artificial intelligence to help users understand, track, and overcome sugar addiction.',
+				date: "2025-01-25",
+				images: [
+					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1755062878/unchain_Team_tuq3by.jpg",
+					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1755064753/bangkit_kb6qlr.png",
+					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1755064221/IMG_0369_xuyu2q.png",
+					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1755064236/Screenshot_2025-08-13_124944_mp1rw8.png",
+				],
+				link: "https://github.com/unChain-Capstone",
 			},
 		],
 	},
@@ -244,6 +289,14 @@ export const siteConfig: SiteConfig = {
 			{
 				label: "Linkedin",
 				href: "https://www.linkedin.com/in/rayaadinda/",
+			},
+			{
+				label: "Spotify",
+				href: "https://open.spotify.com/user/31pg743zjzyci2xlhnbey6rk6vdu?si=720ff2cc893f45d4",
+			},
+			{
+				label: "Instagram",
+				href: "https://www.instagram.com/fromrayacamera/",
 			},
 		],
 	},
