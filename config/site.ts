@@ -63,8 +63,8 @@ export type SiteConfig = {
 			title: string
 			description: string
 			date: string
-			image?: string // fallback single image
-			images?: string[] // optional multiple images for slideshow (takes precedence if provided)
+			image?: string
+			images?: string[]
 			link?: string
 		}[]
 	}
@@ -127,6 +127,11 @@ export const siteConfig: SiteConfig = {
 				href: urls.github,
 				external: true,
 			},
+			{
+				title: "LinkedIn",
+				href: urls.linkedin,
+				external: true,
+			},
 		],
 		button: {
 			label: "Book a Call",
@@ -137,13 +142,12 @@ export const siteConfig: SiteConfig = {
 		hero: {
 			topLine: "👋 Hi there, I'm Raya Adinda. nice to meet you...",
 			h1: {
-				type: "multi-line", // use "single-line" for a single line
+				type: "multi-line",
 				content: [
 					"Web Developer.",
 					"✦ I focus on building your MVP.",
 					"✦ You focus on growing it fast.",
 				],
-				// content: "YOUR HEADING HERE", // use this for single line
 			},
 			description:
 				"Developer with over 3+ years of experience in building web applications, specializing in rapid MVP development. I leverage modern technologies to create scalable and efficient solutions.",
@@ -201,9 +205,9 @@ export const siteConfig: SiteConfig = {
 			{
 				title: "Fern AI",
 				description:
-					"Fern AI is a cutting-edge application that utilizes artificial intelligence to provide personalized learning experiences for users.",
+					"Fern AI is a chatbot summarizer document file using OpenRouter API",
 				video:
-					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1755065542/fern-ai_gopt18.mov",
+					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1755065542/ferrnai.mov",
 				github: "https://github.com/rayaadinda/Fern",
 				livePreview: "https://fernai.vercel.app/",
 			},
@@ -212,7 +216,7 @@ export const siteConfig: SiteConfig = {
 				description:
 					"An application to manage inventory effectively for CV Kurnia Jaya Industry providing features for tracking stock levels, orders, and sales.",
 				video:
-					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1755066194/2025-08-13_13-20-39_rgcafl.mkv",
+					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1755079340/2025-08-13_13-20-39_hgjvx2.mp4",
 				github: "https://github.com/rayaadinda/frontend-kp",
 				livePreview: "https://frontend-kp-gamma.vercel.app/",
 			},
