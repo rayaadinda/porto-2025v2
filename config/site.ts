@@ -111,12 +111,28 @@ export const siteConfig: SiteConfig = {
 				"Personal portfolio showcasing my projects and expertise in full stack development.",
 			type: "website",
 			locale: "en_US",
+			url: "https://rayaadinda.dev",
+			siteName: "Raya Adinda - Full Stack Developer",
+			images: [
+				{
+					url: "https://res.cloudinary.com/dpsofmxsd/image/upload/v1755146395/Screenshot_2025-08-14_113916_jfw7hs.png",
+					alt: "Raya Adinda - Full Stack Developer",
+					width: 1200,
+					height: 630,
+				},
+			],
 		},
 		twitter: {
 			card: "summary_large_image",
 			title: "Raya Adinda - Full Stack Developer",
 			description:
 				"Personal portfolio showcasing my projects and expertise in full stack development.",
+			images: [
+				{
+					url: "https://res.cloudinary.com/dpsofmxsd/image/upload/v1755146395/Screenshot_2025-08-14_113916_jfw7hs.png",
+					alt: "Raya Adinda - Full Stack Developer",
+				},
+			],
 		},
 	},
 	header: {
