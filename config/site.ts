@@ -207,7 +207,7 @@ export const siteConfig: SiteConfig = {
 				description:
 					"Fern AI is a chatbot summarizer document file using OpenRouter API",
 				video:
-					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1755065542/ferrnai.mov",
+					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1755145774/ferrnai_pejqwa.mp4",
 				github: "https://github.com/rayaadinda/Fern",
 				livePreview: "https://fernai.vercel.app/",
 			},

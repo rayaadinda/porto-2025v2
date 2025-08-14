@@ -4,6 +4,9 @@ const config = {
 	images: {
 		remotePatterns: [{ protocol: "https", hostname: "res.cloudinary.com" }],
 	},
+	video: {
+		remotePatterns: [{ protocol: "https", hostname: "res.cloudinary.com" }],
+	},
 }
 
 export default config
