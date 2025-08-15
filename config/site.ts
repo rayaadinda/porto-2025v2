@@ -105,6 +105,8 @@ export const siteConfig: SiteConfig = {
 		],
 		authors: [{ name: "Raya Adinda" }],
 		creator: "Raya Adinda",
+		// Ensure absolute URLs generated for /og and canonical tags
+		metadataBase: new URL("https://rayaadinda.dev"),
 		openGraph: {
 			title: "Raya Adinda - Full Stack Developer",
 			description:
@@ -114,9 +116,17 @@ export const siteConfig: SiteConfig = {
 			url: "https://rayaadinda.dev",
 			siteName: "Raya Adinda - Full Stack Developer",
 			images: [
+				// Dynamic OG
+				{
+					url: "/og", // served by app/og/route.ts
+					alt: "Raya Adinda - Full Stack Developer",
+					width: 1200,
+					height: 630,
+				},
+				// Static fallback (optional second image)
 				{
 					url: "https://res.cloudinary.com/dpsofmxsd/image/upload/v1755146395/Screenshot_2025-08-14_113916_jfw7hs.png",
-					alt: "Raya Adinda - Full Stack Developer",
+					alt: "Raya Adinda - Full Stack Developer (Static Fallback)",
 					width: 1200,
 					height: 630,
 				},
@@ -128,10 +138,8 @@ export const siteConfig: SiteConfig = {
 			description:
 				"Personal portfolio showcasing my projects and expertise in full stack development.",
 			images: [
-				{
-					url: "https://res.cloudinary.com/dpsofmxsd/image/upload/v1755146395/Screenshot_2025-08-14_113916_jfw7hs.png",
-					alt: "Raya Adinda - Full Stack Developer",
-				},
+				"/og",
+				"https://res.cloudinary.com/dpsofmxsd/image/upload/v1755146395/Screenshot_2025-08-14_113916_jfw7hs.png",
 			],
 		},
 	},
@@ -169,7 +177,7 @@ export const siteConfig: SiteConfig = {
 				"Developer with over 3+ years of experience in building web applications, specializing in rapid MVP development. I leverage modern technologies to create scalable and efficient solutions.",
 			actions: {
 				primary: {
-					label: "Talk with me",
+					label: "Hire me",
 					href: urls.bookCall,
 				},
 				secondary: {

@@ -34,3 +34,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+# Portfolio 2025
+
+## Contact Form
+
+A responsive Contact Dialog/Drawer has been added. The "Hire me" button in the hero now opens a dialog on desktop and a drawer on mobile. Submissions POST to `/api/contact`.
+
+### Environment Variables (optional email sending)
+
+To enable real email delivery via Resend:
+
+```
+RESEND_API_KEY=your_key_here
+```
+
+Then uncomment the Resend code inside `app/api/contact/route.ts` and adjust the `from` / `to` addresses.
+
+Without the key configured, submissions are logged server-side.

@@ -6,19 +6,31 @@ import { ArrowUpRightIcon } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { ModeSwitcher } from "@/components/mode-switcher"
 import { siteConfig } from "@/config/site"
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 export function SiteHeader() {
 	return (
 		<header className="flex container w-full z-50 items-center justify-center h-14 sm:h-16 fixed top-0 left-0 right-0 bg-transparent">
 			<div className="flex items-center w-full px-1 sm:px-2 py-2 justify-between h-14 bg-background border-0 sm:border sm:border-border sm:rounded-lg gap-2">
 				<Link href="/" className="focus-ring p-1 text-sm font-bold">
-					<Image
-						src={siteConfig.header.logoImage}
-						alt="Logo"
-						width={30}
-						height={30}
-						className="rounded-full border border-border aspect-square"
-					/>
+					<Tooltip>
+						<TooltipTrigger>
+							<Image
+								src={siteConfig.header.logoImage}
+								alt="Logo"
+								width={30}
+								height={30}
+								className="rounded-full border border-border aspect-square"
+							/>
+							<TooltipContent>
+								<p>This Me LOL (:</p>
+							</TooltipContent>
+						</TooltipTrigger>
+					</Tooltip>
 				</Link>
 
 				<nav className="flex items-center gap-3 h-full">
