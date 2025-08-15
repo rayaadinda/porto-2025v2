@@ -6,6 +6,7 @@ import { Providers } from "@/components/providers/providers"
 import { SiteFooter } from "@/components/site-footer"
 import { siteConfig } from "@/config/site"
 import { ScrollProgressBar } from "@/components/scroll-progress"
+import { Analytics } from "@vercel/analytics/next"
 
 const fontsans = Inter({
 	variable: "--font-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
 					{children}
 					<SiteFooter />
 				</Providers>
+				<Analytics />
 			</body>
 		</html>
 	)

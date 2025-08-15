@@ -24,7 +24,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { cn } from "@/lib/utils"
-import toast, { LoaderIcon } from "react-hot-toast"
+import toast from "react-hot-toast"
 import { Check } from "lucide-react"
 
 interface ContactDialogProps {
@@ -38,8 +38,6 @@ export function ContactDialog({
 }: ContactDialogProps) {
 	const [open, setOpen] = React.useState(false)
 	const [loading, setLoading] = React.useState(false)
-	const [success, setSuccess] = React.useState<string | null>(null)
-	const [error, setError] = React.useState<string | null>(null)
 	const isDesktop = useMediaQuery("(min-width: 768px)")
 	const lastToastId = React.useRef<string | null>(null)
 
@@ -47,8 +45,6 @@ export function ContactDialog({
 		setOpen(v)
 		if (!v) {
 			setTimeout(() => {
-				setSuccess(null)
-				setError(null)
 				setLoading(false)
 			}, 200)
 		}
@@ -59,8 +55,6 @@ export function ContactDialog({
 			<ContactForm
 				onResult={(ok, msg) => {
 					if (ok) {
-						setSuccess(msg || "Message sent!")
-						// update the existing loading toast to success with custom icon
 						if (lastToastId.current) {
 							toast.success(msg || "Message sent", {
 								id: lastToastId.current,
@@ -73,7 +67,6 @@ export function ContactDialog({
 						}
 						setTimeout(() => setOpen(false), 900)
 					} else {
-						setError(msg || "Failed to send message.")
 						if (lastToastId.current) {
 							toast.error(msg || "Failed to send message", {
 								id: lastToastId.current,
@@ -174,7 +167,6 @@ function ContactForm({
 	async function onSubmit(e: React.FormEvent) {
 		e.preventDefault()
 		setLoading(true)
-		// create loading toast and store id
 		lastToastIdRef.current = toast.loading("Sending message...")
 		const formData = new FormData(formRef.current!)
 		const payload = Object.fromEntries(formData.entries()) as Record<
@@ -188,15 +180,16 @@ function ContactForm({
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(payload),
 			})
-			const json = await res.json()
+			const json: { message?: string } = await res.json()
 			if (!res.ok) {
 				onResult(false, json.message || "Something went wrong")
 			} else {
 				formRef.current?.reset()
 				onResult(true, json.message || "Message sent")
 			}
-		} catch (err: any) {
-			onResult(false, err.message)
+		} catch (err) {
+			const message = err instanceof Error ? err.message : "Unexpected error"
+			onResult(false, message)
 		} finally {
 			setLoading(false)
 		}

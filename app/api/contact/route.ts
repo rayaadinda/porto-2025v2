@@ -75,7 +75,7 @@ export async function POST(req: Request) {
 					subject,
 					text: body,
 				})
-			} catch (e: any) {
+			} catch (error: unknown) {
 				return NextResponse.json(
 					{ message: "Email send failed" },
 					{ status: 502 }
@@ -84,7 +84,7 @@ export async function POST(req: Request) {
 		}
 
 		return NextResponse.json({ message: "Message received. Thank you!" })
-	} catch (e: any) {
+	} catch (error: unknown) {
 		return NextResponse.json(
 			{ message: "Failed to process request" },
 			{ status: 500 }
