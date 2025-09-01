@@ -218,15 +218,6 @@ export const siteConfig: SiteConfig = {
 				livePreview: "https://monogatariv2.vercel.app/",
 			},
 			{
-				title: "Promptthing",
-				description:
-					"A open-source alternative to t3.chat, created it for theo's cloneathon.",
-				video:
-					"https://res.cloudinary.com/dalh8le5w/video/upload/v1752544093/Screen_Recording_2025-07-15_at_6.47.37_AM_spzl4t.mov",
-				github: "https://github.com/alifarooq9/promptthing",
-				livePreview: "https://prompthing.vercel.app/",
-			},
-			{
 				title: "Fern AI",
 				description:
 					"Fern AI is a chatbot summarizer document file using OpenRouter API",
