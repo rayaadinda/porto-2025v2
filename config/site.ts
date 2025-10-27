@@ -147,6 +147,10 @@ export const siteConfig: SiteConfig = {
 		logoImage: "/avatar.jpg",
 		nav: [
 			{
+				title: "Projects",
+				href: "/projects",
+			},
+			{
 				title: "Github",
 				href: urls.github,
 				external: true,
@@ -243,6 +247,36 @@ export const siteConfig: SiteConfig = {
 					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1755067287/Untitled_design_tmgl6g.mp4",
 				github: "https://github.com/rayaadinda/Hackathon-Backend",
 				livePreview: "https://temani-sigma.vercel.app/",
+			},
+			{
+				title: "HPZ Crew Dashboard",
+				description:
+					"A comprehensive Next.js 15 crew dashboard application for HPZ with approval-based authentication, performance tracking, content management, and real-time analytics using Supabase.",
+				github: "https://github.com/rayaadinda/HPZCrew-Dashboard",
+			},
+			{
+				title: "UGC Management Hub",
+				description:
+					"A modern web application starter built with Vite and React, featuring Supabase integration, TanStack Query for data management, and beautiful UI components.",
+				github: "https://github.com/rayaadinda/UGC-Management-Hub",
+			},
+			{
+				title: "HPZ Crew",
+				description:
+					"HPZ Crew frontend application built with React and Vite, providing a fast and modern web experience for the HPZ community.",
+				github: "https://github.com/rayaadinda/HPZCrew",
+			},
+			{
+				title: "HPZ Crew Discord Bot",
+				description:
+					"Official Discord bot for HPZ Crew community with Supabase integration, featuring point system, tier management, mission tracking, leaderboard, and welcome system.",
+				github: "https://github.com/rayaadinda/bot-discord",
+			},
+			{
+				title: "HPZ Chatbot Backend",
+				description:
+					"Backend server for HPZ Crew Chatbot using Express.js and OpenRouter API with Llama 3.1, supporting Indonesian language commands and Supabase authentication.",
+				github: "https://github.com/rayaadinda/hpz-chatbot-backend",
 			},
 		],
 	},
