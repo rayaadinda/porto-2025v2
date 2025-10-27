@@ -15,15 +15,15 @@ import {
 export function SiteHeader() {
 	return (
 		<header className="flex container w-full z-50 items-center justify-center h-14 sm:h-16 fixed top-0 left-0 right-0 bg-transparent">
-			<div className="flex items-center w-full px-1 sm:px-2 py-2 justify-between h-14 bg-background border-0 sm:border sm:border-border sm:rounded-lg gap-2">
-				<Link href="/" className="focus-ring p-1 text-sm font-bold">
+			<div className="flex items-center w-full px-3 sm:px-4 py-2 justify-between h-14 bg-background/80 backdrop-blur-md border border-border rounded-lg gap-2">
+				<Link href="/" className="focus-ring p-1 text-sm font-bold rounded-md">
 					<Tooltip>
 						<TooltipTrigger>
 							<Image
 								src={siteConfig.header.logoImage}
 								alt="Logo"
-								width={30}
-								height={30}
+								width={32}
+								height={32}
 								className="rounded-full border border-border aspect-square"
 							/>
 							<TooltipContent>

@@ -168,7 +168,7 @@ export const siteConfig: SiteConfig = {
 			h1: {
 				type: "multi-line",
 				content: [
-					"Web Developer.",
+					"Web Dev, Mobile Dev, Palugada Dev.",
 					"✦ I focus on building your MVP.",
 					"✦ You focus on growing it fast.",
 				],

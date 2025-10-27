@@ -7,6 +7,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { siteConfig } from "@/config/site"
 import { ScrollProgressBar } from "@/components/scroll-progress"
 import { Analytics } from "@vercel/analytics/next"
+import DarkVeil from "@/components/DarkVeil"
 
 const fontsans = Inter({
 	variable: "--font-sans",
@@ -31,6 +32,17 @@ export default function RootLayout({
 				className={`${fontsans.variable} ${fontmono.variable} antialiased font-sans relative`}
 			>
 				<Providers>
+					{/* Fixed background canvas */}
+					<div className="fixed inset-0 -z-10">
+						<DarkVeil
+							hueShift={29}
+							noiseIntensity={0.07}
+							speed={0.5}
+							scanlineFrequency={0.5}
+							warpAmount={0.3}
+							resolutionScale={1}
+						/>
+					</div>
 					<ScrollProgressBar />
 					<SiteHeader />
 					{children}

@@ -11,6 +11,7 @@ import {
 	PageHeading,
 } from "@/components/page-header"
 import { ContactDialog } from "@/components/contact-dialog"
+import Image from "next/image"
 
 const variants: Variants = {
 	initial: { opacity: 0, y: 20, filter: "blur(12px)" },
@@ -59,10 +60,25 @@ export function Hero() {
 				variants={variants}
 				initial="initial"
 				animate="animate"
+				className="w-full rounded-lg overflow-hidden"
+				transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
+			>
+				<Image
+					src="/hero.jpg"
+					alt="Hero Image"
+					width={1200}
+					height={600}
+					className="w-full h-auto object-cover"
+					priority
+				/>
+			</m.div>
+			<m.div
+				variants={variants}
+				initial="initial"
+				animate="animate"
 				className="flex items-center gap-4 flex-col sm:flex-row w-full"
 				transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
 			>
-				{/* Replace direct link with contact dialog trigger */}
 				<ContactDialog
 					triggerClassName={cn(buttonVariants(), "w-full sm:w-fit")}
 				>
