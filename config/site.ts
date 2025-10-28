@@ -204,6 +204,13 @@ export const siteConfig: SiteConfig = {
 				livePreview: "https://github.com/unChain-Capstone/",
 			},
 			{
+				title: "UGC Management Hub",
+				description:
+					"A dedicated web application for TDR Racing to manage User Generated Content (UGC). Built with Vite and React, it features Supabase integration for database needs, TanStack Query for efficient data handling, Apify for content scraping, and a sleek UI using shadcn/ui components.",
+				image:
+					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1761644485/Maxy_x_TDR_2nd_Hackathon_Kelompok_1_ifbvoo.gif",
+			},
+			{
 				title: "Snapify",
 				description:
 					"Snapify is an interactive web project designed to simulate and modernize the photobooth experience.",
@@ -212,6 +219,7 @@ export const siteConfig: SiteConfig = {
 				github: "https://github.com/rayaadinda/Snapify",
 				livePreview: "https://snapifynjz.vercel.app/",
 			},
+
 			{
 				title: "Monogatari",
 				description:
@@ -251,19 +259,18 @@ export const siteConfig: SiteConfig = {
 			{
 				title: "HPZ Crew Dashboard",
 				description:
-					"A comprehensive Next.js 15 crew dashboard application for HPZ with approval-based authentication, performance tracking, content management, and real-time analytics using Supabase.",
+					"A comprehensive Next.js 15 crew dashboard application for TDR Racing HPZ Crew with approval based authentication, performance tracking, content management, and real-time analytics using Supabase.",
+				video:
+					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1761643935/2025-10-28_16-26-53_pck6jv.mp4",
 				github: "https://github.com/rayaadinda/HPZCrew-Dashboard",
 			},
-			{
-				title: "UGC Management Hub",
-				description:
-					"A modern web application starter built with Vite and React, featuring Supabase integration, TanStack Query for data management, and beautiful UI components.",
-				github: "https://github.com/rayaadinda/UGC-Management-Hub",
-			},
+
 			{
 				title: "HPZ Crew",
 				description:
 					"HPZ Crew frontend application built with React and Vite, providing a fast and modern web experience for the HPZ community.",
+				video:
+					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1761645364/2025-10-28_16-23-37_zdkt6h.mp4",
 				github: "https://github.com/rayaadinda/HPZCrew",
 			},
 			{

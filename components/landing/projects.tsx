@@ -17,7 +17,7 @@ const variants: Variants = {
 	animate: { opacity: 1, y: 0, filter: "blur(0px)" },
 }
 
-const PROJECTS_PREVIEW_COUNT = 6
+const PROJECTS_PREVIEW_COUNT = 8
 
 // Helper function to convert title to slug
 function titleToSlug(title: string): string {

@@ -1,6 +1,7 @@
 import { MotionProvider } from "@/components/providers/motion-provider"
 import { ThemeProvider } from "@/components/providers/theme-provider"
-import { Toaster } from "react-hot-toast"
+import { Toaster } from "@/components/ui/sonner"
+import { VisitorWelcome } from "@/components/visitor-welcome"
 
 export function Providers({ children }: { children: React.ReactNode }) {
 	return (
@@ -11,16 +12,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
 				enableSystem
 				disableTransitionOnChange
 			>
+				<VisitorWelcome />
 				{children}
-				<Toaster
-					position="top-right"
-					toastOptions={{
-						style: { fontSize: "0.875rem" },
-						success: {
-							iconTheme: { primary: "hsl(var(--primary))", secondary: "#fff" },
-						},
-					}}
-				/>
+				<Toaster />
 			</ThemeProvider>
 		</MotionProvider>
 	)
