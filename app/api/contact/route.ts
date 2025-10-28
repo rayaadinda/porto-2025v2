@@ -11,13 +11,18 @@ const MAX_HITS = 5
 const contactSchema = z.object({
 	name: z.string().trim().min(2, "Name too short").max(80, "Name too long"),
 	email: z.string().trim().email("Invalid email").max(120, "Email too long"),
-	company: z.string().trim().max(120).optional().or(z.literal("")),
+	company: z
+		.string()
+		.trim()
+		.max(120, "Company name too long")
+		.optional()
+		.or(z.literal("")),
 	message: z
 		.string()
 		.trim()
 		.min(10, "Message too short")
 		.max(2000, "Message too long"),
-	website: z.string().optional(), // honeypot
+	website: z.string().optional().or(z.literal("")), // honeypot - must be empty
 })
 
 function rateLimit(ip: string) {
@@ -48,10 +53,15 @@ export async function POST(req: Request) {
 		const data = await req.json()
 
 		const parsed = contactSchema.safeParse(data)
-		if (
-			!parsed.success ||
-			(parsed.data.website && parsed.data.website.length > 0)
-		) {
+		if (!parsed.success) {
+			return NextResponse.json(
+				{ message: "Invalid submission" },
+				{ status: 400 }
+			)
+		}
+
+		// Honeypot: reject if website field is filled
+		if (parsed.data.website && parsed.data.website.trim().length > 0) {
 			return NextResponse.json(
 				{ message: "Invalid submission" },
 				{ status: 400 }
@@ -75,7 +85,7 @@ export async function POST(req: Request) {
 					subject,
 					text: body,
 				})
-			} catch (error: unknown) {
+			} catch {
 				return NextResponse.json(
 					{ message: "Email send failed" },
 					{ status: 502 }
@@ -84,7 +94,7 @@ export async function POST(req: Request) {
 		}
 
 		return NextResponse.json({ message: "Message received. Thank you!" })
-	} catch (error: unknown) {
+	} catch {
 		return NextResponse.json(
 			{ message: "Failed to process request" },
 			{ status: 500 }

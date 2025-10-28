@@ -24,7 +24,8 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { cn } from "@/lib/utils"
-import toast from "react-hot-toast"
+import { toast } from "sonner"
+import Image from "next/image"
 import { Check } from "lucide-react"
 
 interface ContactDialogProps {
@@ -39,7 +40,6 @@ export function ContactDialog({
 	const [open, setOpen] = React.useState(false)
 	const [loading, setLoading] = React.useState(false)
 	const isDesktop = useMediaQuery("(min-width: 768px)")
-	const lastToastId = React.useRef<string | null>(null)
 
 	function onOpenChange(v: boolean) {
 		setOpen(v)
@@ -55,30 +55,16 @@ export function ContactDialog({
 			<ContactForm
 				onResult={(ok, msg) => {
 					if (ok) {
-						if (lastToastId.current) {
-							toast.success(msg || "Message sent", {
-								id: lastToastId.current,
-								icon: <Check className="size-4 text-emerald-500" />,
-							})
-						} else {
-							lastToastId.current = toast.success(msg || "Message sent", {
-								icon: <Check className="size-4 text-emerald-500" />,
-							})
-						}
+						toast.success(msg || "Message sent", {
+							icon: <Check className="size-4 text-emerald-500" />,
+						})
 						setTimeout(() => setOpen(false), 900)
 					} else {
-						if (lastToastId.current) {
-							toast.error(msg || "Failed to send message", {
-								id: lastToastId.current,
-							})
-						} else {
-							lastToastId.current = toast.error(msg || "Failed to send message")
-						}
+						toast.error(msg || "Failed to send message")
 					}
 				}}
 				loading={loading}
 				setLoading={setLoading}
-				lastToastIdRef={lastToastId}
 			/>
 			<div className="flex items-center justify-end gap-2 pt-2">
 				<span className="text-[10px] uppercase tracking-wide text-muted-foreground">
@@ -90,15 +76,19 @@ export function ContactDialog({
 					rel="noopener noreferrer"
 					className="inline-flex items-center opacity-70 hover:opacity-100 transition-opacity"
 				>
-					<img
+					<Image
 						src="https://www.resend.com/static/brand/resend-wordmark-black.svg"
 						alt="Resend"
 						className="h-3 dark:hidden"
+						width={80}
+						height={12}
 					/>
-					<img
+					<Image
 						src="https://www.resend.com/static/brand/resend-wordmark-white.svg"
 						alt="Resend"
 						className="h-3 hidden dark:block"
+						width={80}
+						height={12}
 					/>
 				</a>
 			</div>
@@ -152,7 +142,6 @@ interface ContactFormProps {
 	onResult: (ok: boolean, message?: string) => void
 	loading: boolean
 	setLoading: React.Dispatch<React.SetStateAction<boolean>>
-	lastToastIdRef: React.MutableRefObject<string | null>
 }
 
 function ContactForm({
@@ -160,14 +149,13 @@ function ContactForm({
 	onResult,
 	loading,
 	setLoading,
-	lastToastIdRef,
 }: ContactFormProps) {
 	const formRef = React.useRef<HTMLFormElement>(null)
 
 	async function onSubmit(e: React.FormEvent) {
 		e.preventDefault()
 		setLoading(true)
-		lastToastIdRef.current = toast.loading("Sending message...")
+		toast.loading("Sending message...")
 		const formData = new FormData(formRef.current!)
 		const payload = Object.fromEntries(formData.entries()) as Record<
 			string,
