@@ -6,7 +6,7 @@ import { toast } from "sonner"
 const VISITOR_NOTIFICATION_SHOWN = "visitor_notification_shown_v1"
 
 const gratefulMessages = [
-	"if you're from twitter... omg ty so much?? 😭 this porto literally just hit 1.2k visitors and i'm actually crying rn 🥹💕 thank you, this means everything",
+	"if you're from twitter... omg ty so much?? 😭 this porto literally just hit 1.2k visitors and i'm actually crying rn 🥹 thank you, this means everything",
 ]
 
 export function VisitorWelcome() {
@@ -21,7 +21,7 @@ export function VisitorWelcome() {
 					gratefulMessages[Math.floor(Math.random() * gratefulMessages.length)]
 
 				toast.success(randomMessage, {
-					duration: 5000,
+					duration: 8000,
 					position: "top-center",
 				})
 			}, 800)
