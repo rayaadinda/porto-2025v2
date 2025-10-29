@@ -3,7 +3,7 @@
 import { useEffect } from "react"
 import { toast } from "sonner"
 
-const VISITOR_NOTIFICATION_SHOWN = "visitor_notification_shown_v2"
+const VISITOR_NOTIFICATION_SHOWN = "visitor_notification_shown_v3"
 
 const gratefulMessages = [
 	"if you're from twitter... thank you so much?? 😭 this porto literally just hit 4k++ visitors (last night)",
