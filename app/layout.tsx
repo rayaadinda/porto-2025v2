@@ -40,7 +40,7 @@ export default function RootLayout({
 					<div className="fixed inset-0 -z-10">
 						<DarkVeil
 							hueShift={29}
-							noiseIntensity={0.07}
+							noiseIntensity={0.04}
 							speed={0.5}
 							scanlineFrequency={0.5}
 							warpAmount={0.3}

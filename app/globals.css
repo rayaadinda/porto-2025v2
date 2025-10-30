@@ -78,7 +78,7 @@
 	--sidebar-ring: oklch(0.708 0 0);
 
 	.container {
-		@apply max-w-3xl mx-auto px-4 xl:px-6;
+		@apply max-w-5xl mx-auto px-4 xl:px-6;
 	}
 }
 

@@ -1,10 +1,9 @@
 import { Connect } from "@/components/landing/connect"
-import { Experience } from "@/components/landing/experience"
 import { Hero } from "@/components/landing/hero"
 import { Projects } from "@/components/landing/projects"
 import { Activities } from "@/components/landing/activities"
 import { PageContainer } from "@/components/page-header"
-import { siteConfig } from "@/config/site"
+import { Experience1 } from "@/components/landing/experience-copy"
 
 export default function Home() {
 	return (
@@ -12,7 +11,7 @@ export default function Home() {
 			<Hero />
 			<Projects />
 			<Activities />
-			{siteConfig.experience && <Experience />}
+			<Experience1 />
 			<Connect />
 		</PageContainer>
 	)

@@ -14,6 +14,7 @@ export type ExperienceItem = {
 	company: string
 	position: string
 	duration: string
+	description: string
 }
 
 export type NavItem = {
@@ -92,7 +93,8 @@ export type SiteConfig = {
 export const siteConfig: SiteConfig = {
 	metadata: {
 		title: {
-			default: "Raya Adinda - Full Stack Developer | React, Next.js, TypeScript",
+			default:
+				"Raya Adinda - Full Stack Developer | React, Next.js, TypeScript",
 			template: "%s | Raya Adinda",
 		},
 		description:
@@ -174,6 +176,7 @@ export const siteConfig: SiteConfig = {
 			{
 				title: "Projects",
 				href: "/projects",
+				external: true,
 			},
 			{
 				title: "Github",
@@ -318,16 +321,22 @@ export const siteConfig: SiteConfig = {
 			{
 				company: "Maxy Academy",
 				position: "Frontend Developer Bootcamp",
+				description:
+					"Participated in an intensive frontend developer bootcamp, learning fundamental web development, React.js, Next.js, Expo React Native, and more through hands on projects and collaborative learning.",
 				duration: "2025 - Present",
 			},
 			{
 				company: "Bangkit Academy",
 				position: "Mobile Developer",
+				description:
+					"Developed mobile applications using Kotlin, focusing on user experience and performance optimization.",
 				duration: "2024 - 2025",
 			},
 			{
 				company: "Universitas Pamulang",
 				position: "Computer Science Student",
+				description:
+					"Studied various computer science topics, including algorithms, data structures, and software engineering principles.",
 				duration: "2022 - Present",
 			},
 		],

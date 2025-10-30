@@ -60,7 +60,7 @@ export function Hero() {
 				variants={variants}
 				initial="initial"
 				animate="animate"
-				className="w-full rounded-lg overflow-hidden"
+				className="w-full overflow-hidden"
 				transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
 			>
 				<Image
