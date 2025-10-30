@@ -48,13 +48,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		}
 	}
 
+	const projectUrl = `https://rayaadinda.dev/projects/${slug}`
+
 	return {
-		title: `${project.title} - Raya Adinda`,
+		title: project.title,
 		description: project.description,
 		openGraph: {
+			title: `${project.title} - Portfolio Project`,
+			description: project.description,
+			url: projectUrl,
+			type: "website",
+			images: project.image ? [{ url: project.image, width: 1200, height: 630, alt: project.title }] : [],
+		},
+		twitter: {
+			card: "summary_large_image",
 			title: project.title,
 			description: project.description,
 			images: project.image ? [project.image] : [],
+		},
+		alternates: {
+			canonical: projectUrl,
 		},
 	}
 }
@@ -75,8 +88,29 @@ export default async function ProjectDetailPage({ params }: Props) {
 		project.description.includes("built with") ||
 		project.description.includes("featuring")
 
+	// Structured data for the project
+	const projectSchema = {
+		"@context": "https://schema.org",
+		"@type": "CreativeWork",
+		name: project.title,
+		description: project.description,
+		author: {
+			"@type": "Person",
+			name: "Raya Adinda",
+			url: "https://rayaadinda.dev",
+		},
+		url: `https://rayaadinda.dev/projects/${slug}`,
+		...(project.image && { image: project.image }),
+		...(project.github && { codeRepository: project.github }),
+		...(project.livePreview && { sameAs: project.livePreview }),
+	}
+
 	return (
 		<PageContainer>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
+			/>
 			<Link
 				href="/projects"
 				className={cn(

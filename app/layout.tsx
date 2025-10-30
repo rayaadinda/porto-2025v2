@@ -8,6 +8,7 @@ import { siteConfig } from "@/config/site"
 import { ScrollProgressBar } from "@/components/scroll-progress"
 import { Analytics } from "@vercel/analytics/next"
 import DarkVeil from "@/components/DarkVeil"
+import { StructuredData } from "@/components/structured-data"
 
 const fontsans = Inter({
 	variable: "--font-sans",
@@ -28,6 +29,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
+			<head>
+				<StructuredData />
+			</head>
 			<body
 				className={`${fontsans.variable} ${fontmono.variable} antialiased font-sans relative`}
 			>

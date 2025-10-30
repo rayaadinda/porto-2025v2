@@ -91,7 +91,10 @@ export type SiteConfig = {
 
 export const siteConfig: SiteConfig = {
 	metadata: {
-		title: "Raya Adinda",
+		title: {
+			default: "Raya Adinda - Full Stack Developer | React, Next.js, TypeScript",
+			template: "%s | Raya Adinda",
+		},
 		description:
 			"I am a full stack developer with over 3+ years of experience in building web applications, specializing in rapid MVP development. I leverage modern technologies to create scalable and efficient solutions.",
 		keywords: [
@@ -102,9 +105,31 @@ export const siteConfig: SiteConfig = {
 			"React",
 			"Next.js",
 			"TypeScript",
+			"Mobile Developer",
+			"MVP Development",
+			"Indonesia Developer",
+			"Bangkit Academy",
+			"Frontend Developer",
+			"Backend Developer",
+			"UI/UX",
 		],
-		authors: [{ name: "Raya Adinda" }],
+		authors: [{ name: "Raya Adinda", url: "https://rayaadinda.dev" }],
 		creator: "Raya Adinda",
+		publisher: "Raya Adinda",
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				"max-video-preview": -1,
+				"max-image-preview": "large",
+				"max-snippet": -1,
+			},
+		},
+		alternates: {
+			canonical: "https://rayaadinda.dev",
+		},
 		// Ensure absolute URLs generated for /og and canonical tags
 		metadataBase: new URL("https://rayaadinda.dev"),
 		openGraph: {

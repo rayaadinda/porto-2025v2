@@ -8,9 +8,6 @@ const nextConfig: NextConfig = {
 			{ protocol: "https", hostname: "via.placeholder.com" },
 		],
 	},
-	video: {
-		remotePatterns: [{ protocol: "https", hostname: "res.cloudinary.com" }],
-	},
 }
 
 export default nextConfig

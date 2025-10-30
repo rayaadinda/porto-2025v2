@@ -65,7 +65,7 @@ export function Hero() {
 			>
 				<Image
 					src="/hero.jpg"
-					alt="Hero Image"
+					alt="Raya Adinda - Full Stack Developer specializing in React, Next.js, and TypeScript"
 					width={1200}
 					height={600}
 					className="w-full h-auto object-cover"
