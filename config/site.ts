@@ -25,6 +25,15 @@ export type NavItem = {
 
 export type SiteConfig = {
 	metadata: Metadata
+	banner?: {
+		enabled: boolean
+		variant: "default" | "success" | "info" | "warning"
+		message: string
+		emoji?: string
+		ctaLabel?: string
+		ctaHref?: string
+		dismissible?: boolean
+	}
 	landing: {
 		hero: {
 			topLine: string
@@ -169,6 +178,15 @@ export const siteConfig: SiteConfig = {
 				"https://res.cloudinary.com/dpsofmxsd/image/upload/v1755146395/Screenshot_2025-08-14_113916_jfw7hs.png",
 			],
 		},
+	},
+	banner: {
+		enabled: true,
+		variant: "success",
+		message: "Open to work and internship opportunities!",
+		emoji: "🚀",
+		ctaLabel: "Contact me",
+		ctaHref: urls.bookCall,
+		dismissible: true,
 	},
 	header: {
 		logoImage: "/avatar.jpg",

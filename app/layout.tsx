@@ -9,6 +9,7 @@ import { ScrollProgressBar } from "@/components/scroll-progress"
 import { Analytics } from "@vercel/analytics/next"
 import DarkVeil from "@/components/DarkVeil"
 import { StructuredData } from "@/components/structured-data"
+import { Banner } from "@/components/banner"
 
 const fontsans = Inter({
 	variable: "--font-sans",
@@ -48,6 +49,7 @@ export default function RootLayout({
 						/>
 					</div>
 					<ScrollProgressBar />
+					<Banner />
 					<SiteHeader />
 					{children}
 					<SiteFooter />
