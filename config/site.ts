@@ -261,7 +261,7 @@ export const siteConfig: SiteConfig = {
 				description:
 					"Snapify is an interactive web project designed to simulate and modernize the photobooth experience.",
 				video:
-					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1754996334/2025-08-12_17-56-01_quqlxh.mp4",
+					"https://cdn-rayaadinda.sgp1.cdn.digitaloceanspaces.com/portfolio-raya/2025-08-12%2017-56-01.mp4",
 				github: "https://github.com/rayaadinda/Snapify",
 				livePreview: "https://snapifynjz.vercel.app/",
 			},
@@ -280,7 +280,7 @@ export const siteConfig: SiteConfig = {
 				description:
 					"Fern AI is a chatbot summarizer document file using OpenRouter API",
 				video:
-					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1755145774/ferrnai_pejqwa.mp4",
+					"https://cdn-rayaadinda.sgp1.cdn.digitaloceanspaces.com/portfolio-raya/2025-08-13%2013-03-45.mp4",
 				github: "https://github.com/rayaadinda/Fern",
 				livePreview: "https://fernai.vercel.app/",
 			},
@@ -289,7 +289,7 @@ export const siteConfig: SiteConfig = {
 				description:
 					"An application to manage inventory effectively for CV Kurnia Jaya Industry providing features for tracking stock levels, orders, and sales.",
 				video:
-					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1755079340/2025-08-13_13-20-39_hgjvx2.mp4",
+					"https://cdn-rayaadinda.sgp1.cdn.digitaloceanspaces.com/portfolio-raya/2025-08-13%2013-20-39.mp4",
 				github: "https://github.com/rayaadinda/frontend-kp",
 				livePreview: "https://frontend-kp-gamma.vercel.app/",
 			},
@@ -298,7 +298,7 @@ export const siteConfig: SiteConfig = {
 				description:
 					"AI‑assisted volunteer management for Indonesian Heritage Society (rosters, smart matching, impact analytics).",
 				video:
-					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1755067287/Untitled_design_tmgl6g.mp4",
+					"https://cdn-rayaadinda.sgp1.cdn.digitaloceanspaces.com/portfolio-raya/Untitled%20design.mp4",
 				github: "https://github.com/rayaadinda/Hackathon-Backend",
 				livePreview: "https://temani-sigma.vercel.app/",
 			},
@@ -307,7 +307,7 @@ export const siteConfig: SiteConfig = {
 				description:
 					"A comprehensive Next.js 15 crew dashboard application for TDR Racing HPZ Crew with approval based authentication, performance tracking, content management, and real-time analytics using Supabase.",
 				video:
-					"https://res.cloudinary.com/dpsofmxsd/video/upload/v1761643935/2025-10-28_16-26-53_pck6jv.mp4",
+					"https://cdn-rayaadinda.sgp1.cdn.digitaloceanspaces.com/portfolio-raya/2025-10-28%2016-26-53.mp4",
 				github: "https://github.com/rayaadinda/HPZCrew-Dashboard",
 			},
 
