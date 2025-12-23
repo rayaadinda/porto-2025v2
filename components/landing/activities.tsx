@@ -54,7 +54,7 @@ export function Activities() {
 								}}
 								viewport={{ once: true }}
 							>
-								<div className="relative w-full aspect-video bg-secondary/60 overflow-hidden">
+								<div className="relative w-full aspect-square bg-secondary/60 overflow-hidden">
 									{Array.isArray(item.images) && item.images.length > 0 ? (
 										<Slideshow
 											images={item.images}

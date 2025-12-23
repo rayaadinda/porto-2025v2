@@ -245,7 +245,7 @@ export const siteConfig: SiteConfig = {
 				description:
 					"Unchain is innovative mobile application that leverages artificial intelligence to help users understand, track, and overcome sugar addiction.",
 				image:
-					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1754997272/template_29_1_zie82i.jpg",
+					"https://cdn-rayaadinda.sgp1.cdn.digitaloceanspaces.com/portfolio-raya/unchain.webp",
 				github: "https://github.com/unChain-Capstone",
 				livePreview: "https://github.com/unChain-Capstone/",
 			},
@@ -254,7 +254,7 @@ export const siteConfig: SiteConfig = {
 				description:
 					"A dedicated web application for TDR Racing to manage User Generated Content (UGC). Built with Vite and React, it features Supabase integration for database needs, TanStack Query for efficient data handling, Apify for content scraping, and a sleek UI using shadcn/ui components.",
 				image:
-					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1761644485/Maxy_x_TDR_2nd_Hackathon_Kelompok_1_ifbvoo.gif",
+					"https://cdn-rayaadinda.sgp1.cdn.digitaloceanspaces.com/portfolio-raya/UGC.gif",
 			},
 			{
 				title: "Snapify",
@@ -368,10 +368,9 @@ export const siteConfig: SiteConfig = {
 					"Built Temani in a 30‑hour hackathon: AI‑assisted volunteer management for Indonesian Heritage Society (rosters, smart matching, impact analytics).",
 				date: "2025-07-24",
 				images: [
-					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1755062639/hackthon_h3ihae.jpg",
-					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1755064576/IMG_4834_lif2rf.jpg",
-					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1755064575/97b4b47b-e075-4077-ab2b-b95bb46ab47d_tkubxv.jpg",
-					"https://res.cloudinary.com/dpsofmxsd/image/upload/v1755064576/IMG_4904_xapjjv.jpg",
+					"https://cdn-rayaadinda.sgp1.cdn.digitaloceanspaces.com/portfolio-raya/Garuda-hacks/97b4b47b-e075-4077-ab2b-b95bb46ab47d.JPG",
+					"https://cdn-rayaadinda.sgp1.cdn.digitaloceanspaces.com/portfolio-raya/Garuda-hacks/e8c0a49c-246a-4970-8c04-5b0b5ec13860.JPG",
+					"https://cdn-rayaadinda.sgp1.cdn.digitaloceanspaces.com/portfolio-raya/Garuda-hacks/IMG_4971.jpg",
 				],
 				link: "https://devpost.com/software/temani",
 			},
